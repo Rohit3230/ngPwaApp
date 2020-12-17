@@ -1,6 +1,8 @@
     <div class="container">
         <!-- <p>signin works!</p> -->
 
+       
+
         <h1>
             The simplest Web OTP API demo
           </h1>
@@ -15,32 +17,7 @@
             </form>
           </div>
         
-          <script>
-          if ('OTPCredential' in window) {
-            window.addEventListener('DOMContentLoaded', e => {
-              const input = document.querySelector('input[autocomplete="one-time-code"]');
-              if (!input) return;
-              const ac = new AbortController();
-              const form = input.closest('form');
-              if (form) {
-                form.addEventListener('submit', e => {
-                  ac.abort();
-                });
-              }
-              navigator.credentials.get({
-                otp: { transport:['sms'] },
-                signal: ac.signal
-              }).then(otp => {
-                input.value = otp.code;
-                if (form) form.submit();
-              }).catch(err => {
-                console.log(err);
-              });
-            });
-          }else{
-              alert('OTPCredential not found in window object.')
-          }
-          </script>
+         
 
 
     </div>
