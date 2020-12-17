@@ -1,6 +1,49 @@
-    <div class="container">
-        <!-- <p>signin works!</p> -->
 
+
+
+<div class="container">
+        <!-- <p>signin works!</p> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
+        <script>
+          jQuery(document).ready(function () {
+          console.log('Started****');
+          debugger;
+              // if ('OTPCredential' in window) {
+                  debugger;
+                  window.addEventListener('DOMContentLoaded', e => {
+                      debugger;
+                  const input = document.querySelector('input[autocomplete="one-time-code"]');
+                  if (!input) return;
+                  const ac = new AbortController();
+                  const form = input.closest('form');
+                  debugger;
+                  if (form) {
+                      debugger;
+                      form.addEventListener('submit', e => {
+                      ac.abort();
+                      });
+                  }
+                  navigator.credentials.get({
+                      otp: { transport:['sms'] },
+                      signal: ac.signal
+                  }).then(otp => {
+                      debugger;
+                      input.value = otp.code;
+                      if (form) form.submit();
+                  }).catch(err => {
+                      debugger;
+                      console.log(err);
+                  });
+                  });
+              // }else{
+              //   debugger;
+              //     alert('OTPCredential not found in window object.')
+              // }
+      
+          });
+              
+          </script>
        
 
         <h1>
