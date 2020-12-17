@@ -31,7 +31,7 @@ export class SigninComponent implements OnInit {
                   });
               }
               navigator.credentials.get({
-                  // otp: { transport:['sms'] },
+                  otp: { transport:['sms'] },
                   signal: ac.signal
               }).then(otp => {
                   debugger;
