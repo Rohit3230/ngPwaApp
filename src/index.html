@@ -9,6 +9,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script src="../node_modules/jquery/dist/jquery.min.js"></script> -->
   <script>
     // jQuery(document).ready(function () {
     //   console.log('AAAA');
@@ -17,7 +18,7 @@
 jQuery(document).ready(function () {
 console.log('Started****');
 debugger;
-      if ('OTPCredential' in window) {
+      // if ('OTPCredential' in window) {
         debugger;
         window.addEventListener('DOMContentLoaded', e => {
             debugger;
@@ -44,10 +45,10 @@ debugger;
             console.log(err);
           });
         });
-      }else{
-        debugger;
-          alert('OTPCredential not found in window object.')
-      }
+      // }else{
+      //   debugger;
+      //     alert('OTPCredential not found in window object.')
+      // }
 
 });
        
