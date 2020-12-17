@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="borderSection checkInternet">
+        <div>
+            <label><b>Check Internet Stataus:</b></label>
+        </div>
+        <div>
+            <button (click)="checkInternetConnectivity()">Check</button>
+            <p *ngIf="internetStatus">
+                Current Internet Status:&nbsp;<b> {{internetStatus}} </b>
+            </p>
+            <p *ngIf="!internetStatus">
+                For checking internet status click on Check button, it will show currenst status of the internet.
+            </p>
+            <p *ngIf="internetStatus">
+                For Toogle internet status set offline or online from "Console Network tab".
+            </p>
+        </div>
+    </div>
+
+    <div class="borderSection">
+        <form>
+            <input autocomplete="one-time-code" required/>
+            <input type="submit">
+          </form>
+          <script>
+              if ('OTPCredential' in window) {
+                    window.addEventListener('DOMContentLoaded', e => {
+                        const input = document.querySelector('input[autocomplete="one-time-code"]');
+                        if (!input) return;
+                        const ac = new AbortController();
+                        const form = input.closest('form');
+                        if (form) {
+                        form.addEventListener('submit', e => {
+                            ac.abort();
+                        });
+                        }
+                        navigator.credentials.get({
+                        otp: { transport:['sms'] },
+                        signal: ac.signal
+                        }).then(otp => {
+                        input.value = otp.code;
+                        if (form) form.submit();
+                        }).catch(err => {
+                        console.log(err);
+                        });
+                    });
+                }
+          </script>
+    </div>
+</div>
