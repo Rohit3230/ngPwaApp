@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1608219243682,
+  "timestamp": 1608220268435,
   "index": "https://rohit3230.github.io/ngPwaApp/index.html",
   "assetGroups": [
     {
@@ -57,7 +57,7 @@
     "https://rohit3230.github.io/ngPwaApp/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://rohit3230.github.io/ngPwaApp/assets/images.png": "100adeca4cd9849ec5062f352a9d962b1ee9c3cf",
     "https://rohit3230.github.io/ngPwaApp/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://rohit3230.github.io/ngPwaApp/index.html": "0c7b62fe9ac5723c2c644a9b6ac1935b06fe17b9",
+    "https://rohit3230.github.io/ngPwaApp/index.html": "85101ee5be1fb4d64677b5833a2f308f486fe8aa",
     "https://rohit3230.github.io/ngPwaApp/main.cea7d8ea2b6478215b67.js": "9cf5d233daeab33a671783181ac613a763fe4c18",
     "https://rohit3230.github.io/ngPwaApp/manifest.webmanifest": "5a72ef2905f97edad12b972f7bde3894fcf5e62d",
     "https://rohit3230.github.io/ngPwaApp/polyfills.8c151b8375e767ff858f.js": "763cd3b34dfa4600ebb9d9588ec7116988e98920",
