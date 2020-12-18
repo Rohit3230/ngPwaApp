@@ -18,33 +18,19 @@
     </div>
 
     <div class="borderSection">
-        <form>
-            <input autocomplete="one-time-code" required/>
-            <input type="submit">
-          </form>
-          <script>
-              if ('OTPCredential' in window) {
-                    window.addEventListener('DOMContentLoaded', e => {
-                        const input = document.querySelector('input[autocomplete="one-time-code"]');
-                        if (!input) return;
-                        const ac = new AbortController();
-                        const form = input.closest('form');
-                        if (form) {
-                        form.addEventListener('submit', e => {
-                            ac.abort();
-                        });
-                        }
-                        navigator.credentials.get({
-                        otp: { transport:['sms'] },
-                        signal: ac.signal
-                        }).then(otp => {
-                        input.value = otp.code;
-                        if (form) form.submit();
-                        }).catch(err => {
-                        console.log(err);
-                        });
-                    });
-                }
-          </script>
+        <h1>
+            The simplest Web OTP API demo/
+          </h1>
+          <div>
+            Process Exp: Send an SMS that includes <pre><code>@rohit3230.github.io #12345</code></pre> to this phone.
+          </div>
+          <div style="border:1px solid; padding: 5px; margin: 10px 0;">
+            <form action="ngPwaApp/test" method="post">
+              Enter OTP here:
+              <input type="text" autocomplete="one-time-code" inputmode="numeric" name="one-time-code"
+              [(ngModel)]="myOTP" >
+              <input type="submit" value="Submit">
+            </form>
+          </div>
     </div>
 </div>
