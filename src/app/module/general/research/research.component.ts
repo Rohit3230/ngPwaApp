@@ -9,7 +9,7 @@ import {WebcamImage, WebcamInitError, WebcamUtil} from 'ngx-webcam';
 })
 export class ResearchComponent implements OnInit {
 
-  isCameraOpene:boolean = false;
+  // isCameraOpene:boolean = false;
   constructor() { }
 
   // ngOnInit(): void {
@@ -17,13 +17,13 @@ export class ResearchComponent implements OnInit {
 
 
   // toggle webcam on/off
-  public showWebcam = true;
+  public showWebcam = false;
   public allowCameraSwitch : boolean = true;
   public multipleWebcamsAvailable = false;
   public deviceId: string='';
   public videoOptions: MediaTrackConstraints = {
-    // width: {ideal: 1024},
-    // height: {ideal: 576}
+    width: {ideal: 1024},
+    height: {ideal: 576}
   };
   public errors: WebcamInitError[] = [];
 
