@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-  myOTP:any = 121212;
+  myOTP:any;
   constructor() { }
 
   ngAfterViewInit() {
@@ -65,7 +65,7 @@ export class SigninComponent implements OnInit {
       });
       });
   }else{
-    this.myOTP = 521456;
+    // this.myOTP = 521456;
     alert('Web OTP API not supported');
   }
 
