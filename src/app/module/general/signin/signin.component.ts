@@ -45,14 +45,16 @@ export class SigninComponent implements OnInit {
               otp && otp.code
             ){
               // input.value = otp.code;
-              console.log('GOT OTP***', otp.code);
+              alert('GOT OTP***'+ otp.code);
             }
           }
+
+          // alert('GOT OTP***', otp.code);
 
           // input.value = otp.code;
           
           // alert('code***'+otp);
-          if (form) form.submit();
+          // if (form) form.submit();
       }).catch(err => {
           debugger;
           console.log(err);
