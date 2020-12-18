@@ -65,6 +65,7 @@ export class SigninComponent implements OnInit {
       });
       });
   }else{
+    this.myOTP = 521456;
     alert('Web OTP API not supported');
   }
 
