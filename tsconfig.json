@@ -19,6 +19,9 @@
     "lib": [
       "es2018",
       "dom"
+    ],
+    "types": [
+      "@types/webappsec-credential-management"
     ]
   },
   "angularCompilerOptions": {
