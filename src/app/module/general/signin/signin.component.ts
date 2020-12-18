@@ -36,10 +36,22 @@ export class SigninComponent implements OnInit {
       navigator.credentials.get(
         reqObj
       // {password: true}
-      ).then(otp => {
+      ).then((otp:any) => {
           debugger;
+          if(
+            otp
+          ){
+            if(
+              otp && otp.code
+            ){
+              // input.value = otp.code;
+              console.log('GOT OTP***', otp.code);
+            }
+          }
+
           // input.value = otp.code;
-          alert('code***'+otp);
+          
+          // alert('code***'+otp);
           if (form) form.submit();
       }).catch(err => {
           debugger;
