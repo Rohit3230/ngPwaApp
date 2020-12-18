@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { $ } from 'protractor';
+// import { FormControl } from '@angular/forms';
+// import { $ } from 'protractor';
 
 @Component({
   selector: 'app-signin',
@@ -7,7 +8,7 @@ import { $ } from 'protractor';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-
+  myOTP:any = 121212;
   constructor() { }
 
   ngAfterViewInit() {
@@ -46,6 +47,9 @@ export class SigninComponent implements OnInit {
             ){
               // input.value = otp.code;
               alert('GOT OTP***'+ otp.code);
+              // input.value = otp.code;
+              this.myOTP = otp.code;
+              // Document.getElementById("myOTP").value = otp.code;
             }
           }
 
