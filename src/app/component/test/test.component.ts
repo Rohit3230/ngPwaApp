@@ -63,7 +63,7 @@ export class TestComponent implements OnInit {
               if(
                 otp && otp.code
               ){
-                alert('GOT OTP***'+ otp.code);
+                // alert('GOT OTP***'+ otp.code);
                 // input.value = otp.code;
                 this.myOTP = otp.code;
               }
@@ -77,7 +77,7 @@ export class TestComponent implements OnInit {
         });
     }else{
       // this.myOTP = 521456;
-      alert('Web OTP API not supported');
+      alert('Web OTP API not supported, Please enter manually.');
     }
   }
   //******* CODE FOR WEB OTP INTEGRATION */
