@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SigninComponent } from './module/general/signin/signin.component';
+// import { SigninComponent } from './module/general/signin/signin.component';
 import { TestComponent } from './component/test/test.component';
 
 const routes: Routes = [
@@ -14,6 +14,11 @@ const routes: Routes = [
     path: 'research',
     loadChildren: () => import('../app/module/general/research/research.module')
       .then(mod => mod.ResearchModule)
+  },
+  {
+    path: 'img-crop',
+    loadChildren: () => import('../app/module/general/img-crop/img-crop.module')
+      .then(mod => mod.ImgCropModule)
   },
   {
     path: 'test', component : TestComponent
