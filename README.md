@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
 ## Demo URL
-https://github.com/Rohit3230/ngPwaApp
+https://rohit3230.github.io/ngPwaApp/
 
 ## Development server
 
