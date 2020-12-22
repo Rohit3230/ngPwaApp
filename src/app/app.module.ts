@@ -8,15 +8,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
-import { TestComponent } from './component/test/test.component';
+// import { TestComponent } from './component/test/test.component';
 // import { ImgCropComponent } from './module/general/img-crop/img-crop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    TestComponent
+    FooterComponent
   ],
   imports: [
     FormsModule ,

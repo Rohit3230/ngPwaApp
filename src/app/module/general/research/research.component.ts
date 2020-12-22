@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Subject, Observable} from 'rxjs';
 import {WebcamImage, WebcamInitError, WebcamUtil} from 'ngx-webcam';
+import { UtilService } from '../../../shared/util.service';
+import { ImageCroppedEvent } from 'ngx-image-cropper';
 
 @Component({
   selector: 'app-research',
@@ -10,7 +12,9 @@ import {WebcamImage, WebcamInitError, WebcamUtil} from 'ngx-webcam';
 export class ResearchComponent implements OnInit {
 
   // isCameraOpene:boolean = false;
-  constructor() { }
+  constructor(
+    public util:UtilService
+  ) { }
 
   // ngOnInit(): void {
   // }
@@ -88,5 +92,92 @@ export class ResearchComponent implements OnInit {
   //     console.warn("Camera access was not allowed by user!");
   //   }
   // }
+
+  //*****  code for check internet status */
+  internetStatus : string = '';
+  checkInternetConnectivity(): void{
+    console.log('value****',this.util.isConnected);
+    if(
+      this.util.isConnected
+    ){
+      this.internetStatus = 'ONLINE';
+    }else{
+      this.internetStatus = 'OFLINE';
+    }
+  }
+  //*****  code for check internet status */
+
+  //******* CODE FOR WEB OTP INTEGRATION */
+  myOTP:any;
+  ngAfterViewInit() {
+    if ('OTPCredential' in window) {
+        debugger;
+        window.addEventListener('DOMContentLoaded', e => {
+            debugger;
+        const input = document.querySelector('input[autocomplete="one-time-code"]');
+        if (!input) return;
+        const ac = new AbortController();
+        const form = input.closest('form');
+        debugger;
+        if (form) {
+            debugger;
+            form.addEventListener('submit', e => {
+            ac.abort();
+            });
+        }
+        var reqObj =  {
+          otp: { transport:['sms'] },
+          signal: ac.signal
+      };
+        navigator.credentials.get(
+          reqObj
+        ).then((otp:any) => {
+            debugger;
+            if(
+              otp
+            ){
+              if(
+                otp && otp.code
+              ){
+                // alert('GOT OTP***'+ otp.code);
+                // input.value = otp.code;
+                this.myOTP = otp.code;
+              }
+            }
+            
+            // if (form) form.submit();
+        }).catch(err => {
+            debugger;
+            console.log(err);
+        });
+        });
+    }else{
+      // this.myOTP = 521456;
+      alert('Web OTP API not supported, Please enter manually.');
+    }
+  }
+  //******* CODE FOR WEB OTP INTEGRATION */
+
+
+  //*************** CODE FOR IMG CROP */
+  imageChangedEvent: any = '';
+  croppedImage: any = '';
+
+  fileChangeEvent(event: any): void {
+      this.imageChangedEvent = event;
+  }
+  imageCropped(event: ImageCroppedEvent) {
+      this.croppedImage = event.base64;
+  }
+  imageLoaded() {
+      /* show cropper */
+  }
+  cropperReady() {
+      /* cropper ready */
+  }
+  loadImageFailed() {
+      /* show message */
+  }
+  //*************** CODE FOR IMG CROP */
 
 }
