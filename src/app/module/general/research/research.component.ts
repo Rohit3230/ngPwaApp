@@ -16,8 +16,10 @@ export class ResearchComponent implements OnInit {
     public util:UtilService
   ) { }
 
-  // ngOnInit(): void {
-  // }
+  public ngOnInit(): void {
+    this.initWebCam();
+    this.util.internetConnected();
+  }
 
 
   // toggle webcam on/off
@@ -39,11 +41,11 @@ export class ResearchComponent implements OnInit {
   // switch to next / previous / specific webcam; true/false: forward/backwards, string: deviceId
   private nextWebcam: Subject<boolean|string> = new Subject<boolean|string>();
 
-  public ngOnInit(): void {
+  public initWebCam(): void{
     WebcamUtil.getAvailableVideoInputs()
-      .then((mediaDevices: MediaDeviceInfo[]) => {
-        this.multipleWebcamsAvailable = mediaDevices && mediaDevices.length > 1;
-      });
+    .then((mediaDevices: MediaDeviceInfo[]) => {
+      this.multipleWebcamsAvailable = mediaDevices && mediaDevices.length > 1;
+    });
   }
 
   public triggerSnapshot(): void {
