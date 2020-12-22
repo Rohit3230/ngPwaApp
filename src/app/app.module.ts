@@ -9,6 +9,8 @@ import { environment } from '../environments/environment';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { WebOtpComponent } from './component/web-otp/web-otp.component';
+import { HttpClientModule, HTTP_INTERCEPTORS   } from "@angular/common/http";
+import { LoggingInterceptorService } from './shared/logging-interceptor.service';
 // import { TestComponent } from './component/test/test.component';
 // import { ImgCropComponent } from './module/general/img-crop/img-crop.component';
 
@@ -23,9 +25,12 @@ import { WebOtpComponent } from './component/web-otp/web-otp.component';
     FormsModule ,
     BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: LoggingInterceptorService, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
