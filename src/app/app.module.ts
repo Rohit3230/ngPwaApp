@@ -8,6 +8,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './component/header/header.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { WebOtpComponent } from './component/web-otp/web-otp.component';
 // import { TestComponent } from './component/test/test.component';
 // import { ImgCropComponent } from './module/general/img-crop/img-crop.component';
 
@@ -15,7 +16,8 @@ import { FooterComponent } from './component/footer/footer.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    WebOtpComponent
   ],
   imports: [
     FormsModule ,

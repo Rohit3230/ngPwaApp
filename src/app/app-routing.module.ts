@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { WebOtpComponent } from './component/web-otp/web-otp.component';
 
 const routes: Routes = [
   
@@ -13,9 +14,7 @@ const routes: Routes = [
     loadChildren: () => import('../app/module/general/research/research.module')
       .then(mod => mod.ResearchModule)
   },
-  { path: '',
-  loadChildren: () => import('../app/module/general/research/research.module')
-  .then(mod => mod.ResearchModule)
+  { path: '', component:WebOtpComponent
   },
     // { path: '', component: SigninComponent },
     // {
