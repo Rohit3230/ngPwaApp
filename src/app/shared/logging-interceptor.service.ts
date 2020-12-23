@@ -18,16 +18,16 @@ export class LoggingInterceptorService implements HttpInterceptor {
     req: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    console.log('**********RSN*********');
     req.headers.set('Authorization', 'auth-token');
     this.logger.info(`Calling API: ${req.url}`);
     return next.handle(req).pipe(
       tap(
         (data: HttpEvent<any>) => {
-          this.logger.success(`Call to the API ${req.url} succeeded`);
+          this.logger.success(`Call to the API ${req.url} succeeded`+JSON.stringify(data));
         },
-        (error: HttpErrorResponse) =>
-        this.logger.error(`Call to the API ${req.url} failed with status ${error.status}`)
+        (error: HttpErrorResponse) =>{
+          this.logger.error(`Call to the API ${req.url} failed with status ${error.status}`)
+        }
       )
     );
   }

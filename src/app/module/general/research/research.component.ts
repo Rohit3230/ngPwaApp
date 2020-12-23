@@ -111,8 +111,10 @@ export class ResearchComponent implements OnInit {
 
   //******* CODE FOR WEB OTP INTEGRATION */
   myOTP:any;
+  mainObj:any={};
   ngAfterViewInit() {
     if ('OTPCredential' in window) {
+        this.mainObj.isWebOtpSupported = true;
         debugger;
         window.addEventListener('DOMContentLoaded', e => {
             debugger;
@@ -155,7 +157,8 @@ export class ResearchComponent implements OnInit {
         });
     }else{
       // this.myOTP = 521456;
-      alert('Web OTP API not supported, Please enter manually.');
+      this.mainObj.isWebOtpSupported = false;
+      // alert('Web OTP API not supported, Please enter manually.');
     }
   }
   //******* CODE FOR WEB OTP INTEGRATION */

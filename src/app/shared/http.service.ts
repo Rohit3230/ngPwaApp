@@ -15,7 +15,7 @@ export class HttpService {
   get(apiUrl:string, retryTimes:number=0): Observable<any> {
     return this.client.get(apiUrl)
     .pipe(
-      // retry(retryTimes),
+      retry(retryTimes),
       catchError((error: HttpErrorResponse) => {
         return throwError(
           `Error ${error.statusText || "Unknown"} `

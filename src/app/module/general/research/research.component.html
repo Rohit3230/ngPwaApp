@@ -11,7 +11,11 @@
 
   <div class="borderSection checkInternet">
     <div>
-      <label><b>The simplest Web OTP API demo/:</b></label>
+      <label><b>The simplest Web OTP API demo:</b></label>
+      <br>
+          <label *ngIf="!mainObj.isWebOtpSupported" style="color: red;">
+              Web OTP API not supported, Please enter manually.
+          </label>
     </div> 
       <div>
         Process Exp: Send an SMS that includes <br>

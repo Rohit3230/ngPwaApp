@@ -5,14 +5,14 @@ import { Injectable } from "@angular/core";
 })
 export class LoggerService {
 	public info(message: string) {
-		console.info(message);
+		console.info('info****',message);
 	}
 
 	public success(message: string) {
-		console.log(message);
+		console.log('success****',message);
 	}
 
 	public error(message: string) {
-		console.error(message);
+		console.error('error****',message);
 	}
 }
