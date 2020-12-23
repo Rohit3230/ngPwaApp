@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1608646548968,
+  "timestamp": 1608698712303,
   "index": "https://rohit3230.github.io/ngPwaApp/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://rohit3230.github.io/ngPwaApp/1.dcc1e00ace579b1e48c2.js",
+        "https://rohit3230.github.io/ngPwaApp/1.267e95c6494ff070a7b8.js",
         "https://rohit3230.github.io/ngPwaApp/favicon.ico",
         "https://rohit3230.github.io/ngPwaApp/index.html",
-        "https://rohit3230.github.io/ngPwaApp/main.60e1d0081e7b15c529d4.js",
+        "https://rohit3230.github.io/ngPwaApp/main.28c078cd5f19d7f5cdee.js",
         "https://rohit3230.github.io/ngPwaApp/manifest.webmanifest",
         "https://rohit3230.github.io/ngPwaApp/polyfills.7a965888daba3fbc4385.js",
-        "https://rohit3230.github.io/ngPwaApp/runtime.2f214579b2a4fd41b3db.js",
+        "https://rohit3230.github.io/ngPwaApp/runtime.92453114187e5fe8ff6a.js",
         "https://rohit3230.github.io/ngPwaApp/scripts.a73844de5f291be94c3b.js",
         "https://rohit3230.github.io/ngPwaApp/styles.55df8ca75efa92fc0da5.css"
       ],
@@ -46,7 +46,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "https://rohit3230.github.io/ngPwaApp/1.dcc1e00ace579b1e48c2.js": "13c431b18b532404ab7dd2bb6a95a17ffd7b8888",
+    "https://rohit3230.github.io/ngPwaApp/1.267e95c6494ff070a7b8.js": "c9ab21d7a200b83beec331ab00b054e9475dbeb5",
     "https://rohit3230.github.io/ngPwaApp/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "https://rohit3230.github.io/ngPwaApp/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "https://rohit3230.github.io/ngPwaApp/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -57,11 +57,11 @@
     "https://rohit3230.github.io/ngPwaApp/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://rohit3230.github.io/ngPwaApp/assets/images.png": "100adeca4cd9849ec5062f352a9d962b1ee9c3cf",
     "https://rohit3230.github.io/ngPwaApp/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://rohit3230.github.io/ngPwaApp/index.html": "df3cb2b3f91802a731dd65a13b8b7981134b7b19",
-    "https://rohit3230.github.io/ngPwaApp/main.60e1d0081e7b15c529d4.js": "0f2f7289e89f3b1ddfa47e6966f2c934e3d0a0ce",
+    "https://rohit3230.github.io/ngPwaApp/index.html": "879d6d6bc06a2589e8fb677a79f7017e31a9c71a",
+    "https://rohit3230.github.io/ngPwaApp/main.28c078cd5f19d7f5cdee.js": "399b4e158cca1684ba00eb2419c57725ed900a29",
     "https://rohit3230.github.io/ngPwaApp/manifest.webmanifest": "5a72ef2905f97edad12b972f7bde3894fcf5e62d",
     "https://rohit3230.github.io/ngPwaApp/polyfills.7a965888daba3fbc4385.js": "b6380ed034569010e4ec859b66fbc7c7132365a3",
-    "https://rohit3230.github.io/ngPwaApp/runtime.2f214579b2a4fd41b3db.js": "e57734f3e71cc065c6385f3253bd75a479e773db",
+    "https://rohit3230.github.io/ngPwaApp/runtime.92453114187e5fe8ff6a.js": "fdcc682370fb5074c16c659551f702decd3a1a8f",
     "https://rohit3230.github.io/ngPwaApp/scripts.a73844de5f291be94c3b.js": "c784dc58993a873f6ee67bcc36f8d2edd5b3844d",
     "https://rohit3230.github.io/ngPwaApp/styles.55df8ca75efa92fc0da5.css": "b8ee91407cc2cb62343ba251463947f79a32c48e"
   },
