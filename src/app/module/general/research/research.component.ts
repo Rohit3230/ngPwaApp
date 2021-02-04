@@ -16,6 +16,18 @@ export class ResearchComponent implements OnInit {
     public util:UtilService
   ) { }
 
+  selectedFile = null;
+
+  onFileSelected(event:any)
+  {
+    this.selectedFile = event.target.files[0];
+  }
+
+  onUpload()
+  {
+    console.log(this.selectedFile); // You can use FormData upload to backend server
+  }
+
   public ngOnInit(): void {
     this.initWebCam();
     this.util.internetConnected();
