@@ -69,6 +69,7 @@ export class ResearchComponent implements OnInit {
   }
 
   public handleInitError(error: WebcamInitError): void {
+    debugger;
     this.errors.push(error);
   }
 

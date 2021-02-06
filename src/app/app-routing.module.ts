@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { WebOtpComponent } from './component/web-otp/web-otp.component';
+import  { WebcamComponent } from '../app/component/webcam/webcam.component';
 
 const routes: Routes = [
   
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: 'research',
     loadChildren: () => import('../app/module/general/research/research.module')
       .then(mod => mod.ResearchModule)
+  },
+  {
+    path: 'webcam',
+    component:WebcamComponent
   },
   { path: '', component:WebOtpComponent
   },
